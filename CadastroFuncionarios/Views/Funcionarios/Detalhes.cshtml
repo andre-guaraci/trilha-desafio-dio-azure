@@ -1,0 +1,62 @@
+﻿@model Funcionarios.Models.Funcionario
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Detalhes do Funcionário";
+}
+
+<h1>Detalhes do Funcionário</h1>
+<div>
+    <dl class="row">
+        <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.Id)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Id)
+        </dt>
+        <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nome)
+        </dt>
+        <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.Endereco)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Endereco)
+        </dt>
+        <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.Ramal)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Ramal)
+        </dt>
+        <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.EmailProfissional)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.EmailProfissional)
+        </dt>
+        <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.Departamento)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Departamento)
+        </dt>
+        <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.Salario)
+        </dt>
+        <dt class="col-sm-10">
+            @Model.Salario.ToString("C", CultureInfo.GetCultureInfo("pt-BR"))
+        </dt>
+         <dt class=" col-sm-2">
+            @Html.DisplayNameFor(x => x.DataAdmissao)
+        </dt>
+        <dt class="col-sm-10">
+            @Model.DataAdmissao.ToString("dd/MM/yyyy HH:mm:ss")
+        </dt>
+      
+</div>
+<a asp-action="Atualizar" asp-route-id="@Model.Id">Editar</a> |
+<a asp-action="Index">Voltar</a>

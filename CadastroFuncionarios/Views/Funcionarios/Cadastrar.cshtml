@@ -1,0 +1,54 @@
+﻿@model Funcionarios.Models.Funcionario
+
+@{
+    ViewData["Title"] = "Cadastrar Funcionário"; 
+}
+
+<h1>Cadastrar Funcionario</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Cadastrar">
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input placeholder="Nome" asp-for="Nome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereco" class="control-label"></label>
+                <input placeholder="Endereço" asp-for="Endereco" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Ramal" class="control-label"></label>
+                <input placeholder="Ramal" asp-for="Ramal" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailProfissional" class="control-label"></label>
+                <input placeholder="Email Profissional" asp-for="EmailProfissional" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Departamento" class="control-label"></label>
+                <input placeholder="Departamento" asp-for="Departamento" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Salario" class="control-label"></label>
+                <input placeholder="Salário" asp-for="Salario" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Ativo" class="control-label"></label>
+                <input type="checkbox" asp-for="Ativo" checked="checked" class="form-check-input" />
+            </div>
+            <br>
+
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<br />
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
